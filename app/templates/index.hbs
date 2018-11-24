@@ -1,0 +1,44 @@
+{{!-- <ul>
+    <li>{{#link-to "books.index"}}
+          Fetch All the Books From Server{{/link-to}} 
+          <p style="color:red">[Note: Won't work since there's no server.]</p>
+    </li>
+
+    <li>{{#link-to "books.new"}}
+            Create a new book{{/link-to}}
+    </li>
+</ul><br><br><br>{{log model}} --}}
+{{!-- {{profile-card name=model.name avatar=model.avatar bio=model.bio}} --}}
+{{!-- {{profile-card-static}} --}}
+
+{{!-- {{my-btn}}
+<b>Info:</b> <span id="info"> {{title}}</span>
+
+
+<h4> Index view: Bubbling actions through components</h4>
+
+{{pressCount}} Button presses
+{{button-wrapper action="buttonClick"}}
+
+<hr>
+
+{{comp-test}} --}}
+
+<hr>
+<h3>hbs</h3>
+<div>
+  <p>appName: {{input type="text" value=appName}}</p>
+  <p>Triggers: didUpdateAttrs, didReceiveAttrs, willUpdate, willRender, 
+      didUpdate, didRender</p>
+</div>
+
+<div>
+  <p>data: {{input type="text" value=data}}</p>
+  <p>Triggers: willUpdate, willRender, didUpdate, didRender</p>
+</div>
+
+
+<hr>
+{{new-component name=appName data=data}}
+
+{{outlet}}

@@ -1,0 +1,7 @@
+.tbl tr.body td.blue{
+    background-color:rgba(32, 200, 223, 0.938);
+}
+
+.tbl tr.body td.green{
+    background-color:rgb(38, 165, 76);
+}

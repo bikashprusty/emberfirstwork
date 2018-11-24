@@ -1,0 +1,30 @@
+This is the {{name}}. <br>
+I make the SPA app work :-)
+
+<table name="tbl" class="tbl" width="100%" border="2" padding="0" style="border-collapse: collapse; border: 2px solid black;padding:0; margin:0;">
+    <tr class="head" style="background-color:black; color: white;">
+            <th style="border: 2px solid black;">Company Name</th>
+            <th style="border: 2px solid black;">Headquarters</th>
+            <th style="border: 2px solid black;">Revenue</th>
+      </tr>
+      {{#each model as |item|}}
+        <tr class="body" style="border: 2px solid black;">
+            <td style="border: 2px solid black;color: black;">{{item.name}}</td>
+            <td class={{if changecolor 'green' 'blue'}} style="border: 2px solid black; color: white;">{{item.headquarters}}</td>
+            <td style="border: 2px solid black;color: black;">{{item.revenue}}</td>
+        </tr>
+      {{/each}}
+</table>
+<button {{action 'changeColorStatus'}} style="margin-top:10px;">Change background color of second column to {{if changecolor 'blue' 'green'}}</button>
+
+
+<div>Hi Mr. {{firstName}} {{lastName}}</div><hr>
+<div> Last Name is disabled: {{nameDisabled}}<br></div>
+<hr> <br>
+<div>First Name : {{input value=firstName size=20 }}</div>
+<div> Last Name : {{input value=lastName disabled=nameDisabled}}</div>
+<br><br>
+
+<div><small>Disable last name ? </small>
+       {{input type="checkbox" checked=nameDisabled}}
+</div>
